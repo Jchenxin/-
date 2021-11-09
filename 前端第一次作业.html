@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>几个框框</title>
+    <style>
+        @media screen and (min-width:640px) {
+        .fam {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .a {
+            text-align: left;
+            border:solid red;
+            width: 150px;
+            height: 120px;
+            order: 1;
+        }
+        .b {
+            width: 150px;
+            height: 100px;
+            border:solid red;
+            order: 2;
+        }
+        .c {
+            width: 150px;
+            height: 40px;
+            border:solid red;
+            order: 3;
+        }
+        .d {
+            width: 150px;
+            height: 200px;
+            border:solid blue;
+            align-self: flex-end;
+            align-items: flex-end;
+            order: 4;
+        }
+    }
+    @media screen and (max-width: 640px){
+        .fam {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-around;
+            padding: 20px;
+            grid-template-areas: q q w w e e;
+        }
+        .a {
+            text-align: left;
+            border:solid red;
+            width: 150px;
+            height: 120px;
+            align-items: flex-end;
+            order: 2;
+            grid-area: q;
+        }
+        .b {
+            width: 150px;
+            height: 100px;
+            border:solid red;
+            order: 3;
+            grid-area: w;
+        }
+        .c {
+            width: 150px;
+            height: 40px;
+            border:solid red;
+            order: 4;
+            grid-area: e;
+            align-self: flex-start;
+        }
+        .d {
+            width: 150px;
+            height: 200px;
+            border:solid blue;
+            align-self: flex-end;
+            align-items: flex-end;
+            order: 1;
+            grid-area: r;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class='fam'>
+        <div class= 'a'><strong>#f00</strong></div>
+        <div class= 'b'></div>
+        <div class= 'c'></div>
+        <div class= 'd'><strong>#0f0</strong></div></div>
+</body>
+</html>
